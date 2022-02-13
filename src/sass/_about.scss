@@ -181,20 +181,20 @@
         }
 
         &__license {
-            min-width: 360px;
-            max-height: 300px;
+            min-width: 300px;
+            max-height: 270px;
         }
 
         &__header {
-            font-size: 1rem;
+            font-size: .8rem;
         }
 
         &__header::after {
-            font-size: 1rem;
+            font-size: .8rem;
         }
 
         &__license-details {
-            font-size: 1rem;
+            font-size: .8rem;
         }
 
         &__img {
@@ -203,12 +203,13 @@
 
         &__address,
         &__rest {
-            font-size: .9rem;
+            font-size: .7rem;
         }
 
         &__text {
             width: 100%;
-            font-size: 1rem;
+            font-size: .9rem;
+            padding: 0 2rem;
             justify-self: flex-start;
         }
     }
@@ -220,11 +221,25 @@
 
         &__container {
             justify-content: center;
+            position: relative;
+        }
+
+
+        &__title::after {
+            content: "";
+            display: inline-block;
+            background-color: $color-green-gray-light;
+            width: 50%;
+            max-width: 750px;
+            height: 3px;
+            position: absolute;
+            bottom: -50%;
+            left: 25%;
         }
 
         &__license {
-            min-width: 300px;
-            max-height: 270px;
+            min-width: 280px;
+            max-height: 265px;
         }
 
         &__header {
@@ -233,12 +248,12 @@
 
         &__header::before {
             content: "";
-            width: 85%;
+            width: 80%;
             height: 3px;
             background-color: #0056b3;
             position: absolute;
             top: 20%;
-            left: 8%;
+            left: 10%;
         }
 
         &__header::after {
@@ -262,6 +277,7 @@
 
         &__img {
             margin-top: 20px;
+            margin-right: 10px;
             width: 80%;
         }
 
@@ -271,7 +287,9 @@
         }
 
         &__text {
-            font-size: 1.2rem;
+            padding: 0 1rem;
+            font-size: 1rem;
+            text-align: left;
         }
 
     }
@@ -291,7 +309,7 @@
         // }
 
         &__text {
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
     }
 }
