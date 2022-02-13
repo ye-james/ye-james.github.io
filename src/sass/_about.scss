@@ -1,0 +1,297 @@
+.about {
+    font-family: 'Bree Serif', sans-serif;
+    min-height: 50vh;
+    background-image: linear-gradient($color-gray-light, $color-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    &__container {
+        display: flex;
+        flex-flow: wrap;
+        justify-content: center;
+        align-items: center;
+        gap: 5rem;
+        margin-top: 4rem;
+        padding: 5rem 8rem;
+    }
+
+
+    &__title {
+        color: $color-green-gray-light;
+        margin-bottom: 2rem;
+        position: relative;
+
+        &::after {
+            content: "";
+            display: inline-block;
+            background-color: $color-green-gray-light;
+            width: 85%;
+            max-width: 800px;
+            height: 3px;
+            position: absolute;
+            bottom: -50%;
+            left: 50px;
+        }
+    }
+
+
+    &__text {
+        width: 100%;
+        min-width: 400px;
+        max-width: 800px;
+        font-size: 1.4rem;
+        letter-spacing: 0.1rem;
+    }
+
+
+    &__license {
+        min-width: 600px;
+        max-width: 700px;
+        max-height: 400px;
+        background-color: $color-white;
+        border: 1.8px solid black;
+        border-radius: 1.5rem;
+        -webkit-box-shadow: -5px 11px 36px -2px rgba(0, 0, 0, 0.31);
+        box-shadow: -5px 11px 36px -2px rgba(0, 0, 0, 0.31);
+        padding: 1.2rem 2rem;
+        color: #0056b3;
+        text-transform: uppercase;
+        position: relative;
+        transition: ease 500ms;
+    }
+
+    &__license:hover {
+        transform: translateY(-3px);
+    }
+
+    &__header {
+        justify-self: start;
+    }
+
+    &__header::before {
+        content: "";
+        width: 90%;
+        height: 3px;
+        background-color: #0056b3;
+        position: absolute;
+        top: 15%;
+        left: 5%;
+    }
+
+    &__header::after {
+        content: "Identification card";
+        display: inline-block;
+        position: absolute;
+        top: 6%;
+        left: 45%;
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #2a9248;
+    }
+
+    &__main {
+        display: flex;
+        justify-content: flex-start;
+        margin-top: 1rem;
+        color: #e90001;
+    }
+
+    &__photo {
+        width: 90%;
+        flex-basis: 20%;
+    }
+
+    &__license-details {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+        font-size: 1.5rem;
+        font-weight: 700;
+        flex-basis: 70%;
+    }
+
+    &__license-details>*::before {
+        content: "";
+        color: #0056b3;
+        font-size: 0.8rem;
+        font-weight: 1000;
+        margin-right: 0.75rem;
+    }
+
+
+    &__dl::before {
+        content: "DL";
+    }
+
+    &__exp::before {
+        content: "EXP";
+    }
+
+    &__last::before {
+        content: "LN";
+    }
+
+
+    &__first::before {
+        content: "FN";
+    }
+
+    &__dob::before {
+        content: "DOB";
+        margin-right: 0;
+    }
+
+    &__rest::before {
+        content: "RSTR";
+    }
+
+    &__last,
+    &__first,
+    &__address,
+    &__rest {
+        color: #000;
+    }
+
+    &__address {
+        font-size: 1.2rem;
+        width: 50%;
+        margin-top: .5rem;
+        margin-left: 0;
+    }
+
+    &__rest {
+        font-size: 1.2rem;
+    }
+}
+
+
+
+//MEDIA QUERIES
+
+
+@media only screen and (max-width: 390px) {
+    .about {
+
+        &__container {
+            justify-content: center;
+        }
+
+        &__license {
+            min-width: 360px;
+            max-height: 300px;
+        }
+
+        &__header {
+            font-size: 1rem;
+        }
+
+        &__header::after {
+            font-size: 1rem;
+        }
+
+        &__license-details {
+            font-size: 1rem;
+        }
+
+        &__img {
+            width: 70%;
+        }
+
+        &__address,
+        &__rest {
+            font-size: .9rem;
+        }
+
+        &__text {
+            width: 100%;
+            font-size: 1rem;
+            justify-self: flex-start;
+        }
+    }
+}
+
+
+@media only screen and (min-width: 391px) and (max-width: 600px) {
+    .about {
+
+        &__container {
+            justify-content: center;
+        }
+
+        &__license {
+            min-width: 300px;
+            max-height: 270px;
+        }
+
+        &__header {
+            font-size: 1.2rem;
+        }
+
+        &__header::before {
+            content: "";
+            width: 85%;
+            height: 3px;
+            background-color: #0056b3;
+            position: absolute;
+            top: 20%;
+            left: 8%;
+        }
+
+        &__header::after {
+            content: "Identification card";
+            display: inline-block;
+            position: absolute;
+            top: 9%;
+            left: 45%;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2a9248;
+        }
+
+        &__header::after {
+            font-size: .8rem;
+        }
+
+        &__license-details {
+            font-size: .9rem;
+        }
+
+        &__img {
+            margin-top: 20px;
+            width: 80%;
+        }
+
+        &__address,
+        &__rest {
+            font-size: .8rem;
+        }
+
+        &__text {
+            font-size: 1.2rem;
+        }
+
+    }
+}
+
+
+@media only screen and (min-width: 601px) and (max-width: 1200px) {
+    .about {
+
+        &__container {
+            width: 100%;
+        }
+
+        // &__bio {
+        //     width: 100%;
+        //     margin-top: 2rem;
+        // }
+
+        &__text {
+            font-size: 1.2rem;
+        }
+    }
+}

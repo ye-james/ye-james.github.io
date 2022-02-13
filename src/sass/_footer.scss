@@ -1,0 +1,15 @@
+footer {
+    height: 10vh;
+    // background-color: black;
+    // color: $color-white;
+}
+
+.footer__container {
+    background-image: linear-gradient($color-white, $color-gray-light);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}

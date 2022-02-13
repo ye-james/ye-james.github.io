@@ -1,0 +1,17 @@
+.skills {
+    height: 20vh;
+    margin: 2rem auto;
+
+    &__container {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(4, max-content);
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__item {
+        width: 5rem;
+        fill: $color-gray-light;
+    }
+}

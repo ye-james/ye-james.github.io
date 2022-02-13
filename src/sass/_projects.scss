@@ -1,0 +1,142 @@
+.projects__title {
+    text-align: center;
+    margin-top: 4rem;
+    color: $color-green-gray-light;
+    position: relative;
+
+    &::after {
+        content: "";
+        display: inline-block;
+        background-color: $color-green-gray-light;
+        width: 85%;
+        max-width: 750px;
+        height: 3px;
+        position: absolute;
+        bottom: -50%;
+        left: 22%;
+    }
+}
+
+.projects__container {
+    min-height: 40vh;
+    margin-top: 3rem;
+    background-color: $color-white;
+    display: flex;
+    flex-flow: wrap;
+    gap: 5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.project__card {
+    color: $color-white;
+    background-image: url(../imgs/program-1.jpg);
+    background-size: cover;
+    -webkit-box-shadow: -5px 11px 36px -2px rgba(0, 0, 0, 0.31);
+    box-shadow: -5px 11px 36px -2px rgba(0, 0, 0, 0.31);
+    padding: 10rem 0 0;
+    max-width: 35ch;
+    min-width: 250px;
+    overflow: hidden;
+    transition: transform 400ms ease;
+
+    &:hover {
+        transform: scale(1.02);
+    }
+
+    &-content {
+        padding: 2rem;
+        background: linear-gradient(rgba(0, 0, 0, .0),
+                rgba(20, 0, 0, .2),
+                rgba(0, 0, 0, 1));
+        transform: translateY(70%);
+        transition: transform 400ms ease;
+    }
+
+
+    &:hover &-content {
+        transform: translateY(0);
+        transition-delay: 500ms;
+    }
+
+
+    &-content>*:not(.project__card-title) {
+        opacity: 0;
+        transition: transform 400ms linear;
+    }
+
+
+    &:hover &-content>*:not(.project__card-title) {
+        opacity: 1;
+    }
+
+
+
+    &-title {
+        position: relative;
+        width: max-content;
+    }
+
+    &-title::after {
+        content: "";
+        position: absolute;
+        height: 4px;
+        left: calc(2rem * -1);
+        bottom: -4px;
+        width: calc(100% + 2rem);
+        background: $color-gray-light;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 400ms ease;
+    }
+
+
+    &:hover &-title:after {
+        transform: scaleX(1);
+    }
+
+
+    &-body {
+        margin-top: 1rem;
+    }
+}
+
+.button {
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 1rem;
+    color: $color-white;
+    background-color: $color-green-gray;
+    padding: .5rem 1.25rem;
+    border-radius: 0.25rem;
+
+    &:hover,
+    &:focus {
+        background-color: $color-green-gray-light;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+
+    .projects__container {
+        display: block;
+
+    }
+
+    .project__card {
+        max-width: 100%;
+        min-height: 300px;
+    }
+
+    .projects__container > *:not(:last-child) {
+        margin: 3rem 0;
+    }
+
+}
+
+@media only screen and (min-width: 1200px) {
+    .project__card {
+        display: block;
+    }
+}

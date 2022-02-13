@@ -1,0 +1,260 @@
+.container {
+    width: 100%;
+    height: 75vh;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(224, 224, 224, 0.10968137254901966) 43%, rgba(0, 0, 0, 1) 100%),
+        url(../imgs/IMG_5914.jpg);
+    background-position: center;
+    background-size: cover;
+    color: $color-white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    vertical-align: center;
+
+}
+
+
+.nav {
+    height: 3.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    &__links ul {
+        display: flex;
+        margin: 0;
+    }
+}
+
+
+ul li {
+    list-style: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    padding: 0 .5rem;
+    color: $color-green-gray-light
+}
+
+
+ul li a {
+    text-decoration: none;
+    display: block;
+
+    &:visited {
+        color: $color-green-gray-light
+    }
+}
+
+
+ul li a:hover {
+    color: $color-green-gray-lighter;
+
+    &::after {
+        content: "";
+        width: 80%;
+        height: 2px;
+        background-color: $color-gray-light;
+    }
+}
+
+
+.toggle-button {
+    position: absolute;
+    top: .8rem;
+    right: 1rem;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+
+}
+
+.toggle-button .bar {
+    height: 3px;
+    width: 100%;
+    background-color: $color-green-gray-light;
+
+}
+
+.hero {
+    opacity: .75;
+    text-shadow: 2px 4px 5px rgba(0, 0, 0, 0.31);
+    letter-spacing: .2rem;
+
+    &__name {
+        font-size: 8rem;
+        font-weight: 400;
+        overflow: hidden;
+        border-right: .2rem solid white;
+        white-space: nowrap;
+        margin-top: 3rem;
+        animation:
+            typing 1.6s steps(12, end),
+            blink-caret .8s step-end infinite;
+        animation-delay: 1.2s;
+        animation-fill-mode: both;
+    }
+
+    &__title {
+        margin-top: 1rem;
+        float: right;
+        font-size: 1.1rem;
+        animation: fadeIn linear 1.4s;
+        -webkit-animation: fadeIn linear 1.4s;
+        -moz-animation: fadeIn linear 1.4s;
+        -o-animation: fadeIn linear 1.4s;
+        -ms-animation: fadeIn linear 1.4s;
+        animation-delay: 2.2s;
+        animation-fill-mode: both;
+    }
+}
+
+
+.hero::before {
+    content: "Hi! My name is...";
+    font-size: 2.5rem;
+    animation: fadeIn linear 1s;
+    -webkit-animation: fadeIn linear 1s;
+    -moz-animation: fadeIn linear 1s;
+    -o-animation: fadeIn linear 1s;
+    -ms-animation: fadeIn linear 1s;
+}
+
+//fade in effect
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: .7;
+    }
+}
+
+@-moz-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: .7;
+    }
+}
+
+@-webkit-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: .7;
+    }
+}
+
+@-o-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: .7;
+    }
+}
+
+@-ms-keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: .7;
+    }
+}
+
+
+
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0;
+        opacity: 1;
+    }
+
+    to {
+        width: 100%;
+        opacity: 1;
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+
+    from,
+    to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: white;
+    }
+}
+
+
+
+//MEDIA QUERIES
+@media only screen and (max-width: 600px) {
+    .toggle-button {
+        display: flex;
+    }
+
+    .nav {
+        flex-direction: column;
+        background-color: $color-white;
+        //height: 250px;
+        z-index: 10;
+
+        &__logo {
+            margin-bottom: 2rem;
+        }
+
+        &__links {
+            display: none;
+            width: 100%;
+            flex-direction: column;
+
+            & ul {
+                width: 100%;
+                flex-direction: column;
+            }
+        }
+
+        &__item {
+            text-align: center;
+            padding: .5rem 0;
+            font-size: 1.3rem;
+        }
+    }
+
+    .nav__links.active {
+        display: flex;
+    }
+
+
+
+    .hero {
+
+        &__name::before {
+            font-size: 2rem;
+        }
+
+        &__name {
+            font-size: 4rem;
+        }
+    }
+}
+
