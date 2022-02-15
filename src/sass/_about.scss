@@ -42,6 +42,8 @@
         max-width: 800px;
         font-size: 1.4rem;
         letter-spacing: 0.1rem;
+        text-align: left;
+        margin-top: 3rem
     }
 
 
@@ -65,18 +67,15 @@
         transform: translateY(-3px);
     }
 
-    &__header {
-        justify-self: start;
-    }
 
     &__header::before {
         content: "";
-        width: 90%;
+        width: 83%;
         height: 3px;
         background-color: #0056b3;
         position: absolute;
         top: 15%;
-        left: 5%;
+        left: 10%;
     }
 
     &__header::after {
@@ -108,10 +107,10 @@
         justify-content: space-evenly;
         align-items: flex-start;
         flex-wrap: wrap;
-
         font-size: 1.5rem;
         font-weight: 700;
         flex-basis: 70%;
+        text-align: left;
     }
 
     &__license-details>*::before {
@@ -119,7 +118,11 @@
         color: #0056b3;
         font-size: 0.8rem;
         font-weight: 1000;
-        margin-right: 0.75rem;
+        margin-right: 0.4rem;
+    }
+
+    &__address::before {
+        margin: 0;
     }
 
 
@@ -173,143 +176,68 @@
 //MEDIA QUERIES
 
 
-@media only screen and (max-width: 390px) {
+@media only screen and (max-width: 575.98px) {
+
     .about {
-
         &__container {
-            justify-content: center;
+            padding: 0;
         }
-
-        &__license {
-            min-width: 300px;
-            max-height: 270px;
-        }
-
-        &__header {
-            font-size: .8rem;
-        }
-
-        &__header::after {
-            font-size: .8rem;
-        }
-
-        &__license-details {
-            font-size: .8rem;
-        }
-
-        &__img {
-            width: 70%;
-        }
-
-        &__address,
-        &__rest {
-            font-size: .7rem;
-        }
-
-        &__text {
-            width: 100%;
-            font-size: .9rem;
-            padding: 0 2rem;
-            justify-self: flex-start;
-        }
-    }
-}
-
-
-@media only screen and (min-width: 391px) and (max-width: 600px) {
-    .about {
-
-        &__container {
-            justify-content: center;
-            position: relative;
-        }
-
 
         &__title::after {
-            content: "";
-            display: inline-block;
-            background-color: $color-green-gray-light;
-            width: 50%;
-            max-width: 750px;
-            height: 3px;
-            position: absolute;
-            bottom: -50%;
-            left: 25%;
-        }
-
-        &__license {
-            min-width: 280px;
-            max-height: 265px;
+            width: 75%;
         }
 
         &__header {
-            font-size: 1.2rem;
-        }
-
-        &__header::before {
-            content: "";
-            width: 80%;
-            height: 3px;
-            background-color: #0056b3;
-            position: absolute;
-            top: 20%;
-            left: 10%;
-        }
-
-        &__header::after {
-            content: "Identification card";
-            display: inline-block;
-            position: absolute;
-            top: 9%;
-            left: 45%;
-            font-size: 1.2rem;
-            font-weight: 600;
-            color: #2a9248;
+            font-size: .8rem;
         }
 
         &__header::after {
             font-size: .8rem;
+        }
+
+        &__main {
+            gap: .75rem;
+            padding-top: .4rem;
+        }
+        
+        &__license {
+            max-width: 330px;
+            max-height: 260px;
+            min-width: 250px;
+            padding: 1rem 1.3rem;
+        }
+
+
+        &__photo {
+            padding-top: .35rem;
+            width: 90%;
+            height: 90%;
         }
 
         &__license-details {
             font-size: .9rem;
+            justify-content: flex-start;
         }
 
-        &__img {
-            margin-top: 20px;
-            margin-right: 10px;
-            width: 80%;
+        &__address::before {
+            margin: 0;
         }
 
-        &__address,
+        &__address {
+            margin-top: .1rem;
+            font-size: .8rem;
+            width: 100%;
+        }
+
         &__rest {
             font-size: .8rem;
         }
 
-        &__text {
-            padding: 0 1rem;
-            font-size: 1rem;
-            text-align: left;
-        }
-
-    }
-}
-
-
-@media only screen and (min-width: 601px) and (max-width: 1200px) {
-    .about {
-
-        &__container {
-            width: 100%;
-        }
-
-        // &__bio {
-        //     width: 100%;
-        //     margin-top: 2rem;
-        // }
 
         &__text {
+            padding: 0 1.5rem 0 2.5rem;
             font-size: 1rem;
         }
+
     }
 }

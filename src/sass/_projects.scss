@@ -9,11 +9,14 @@
         display: inline-block;
         background-color: $color-green-gray-light;
         width: 85%;
-        max-width: 750px;
+        max-width: 800px;
         height: 3px;
         position: absolute;
         bottom: -50%;
-        left: 22%;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        text-align: center;
     }
 }
 
@@ -39,6 +42,7 @@
     min-width: 250px;
     overflow: hidden;
     transition: transform 400ms ease;
+    text-align: left;
 
     &:hover {
         transform: scale(1.02);
@@ -117,47 +121,19 @@
     }
 }
 
-@media only screen and (max-width: 390px) {
 
-
-
-}
-
-
-@media only screen and (min-width: 391px) and (max-width: 600px) {
-    .projects__title::after {
-        content: "";
-        display: inline-block;
-        background-color: $color-green-gray-light;
-        width: 50%;
-        max-width: 750px;
-        height: 3px;
-        position: absolute;
-        bottom: -50%;
-        left: 25%;
-    }
-}
-
-@media only screen and (max-width: 900px) {
+@media only screen and (max-width: 991.98px) {
 
     .projects__container {
         display: block;
-
+        
+        & > *:not(:last-child) {
+            margin: 3rem 0;
+        }
     }
 
     .project__card {
         max-width: 100%;
-        min-height: 300px;
-    }
-
-    .projects__container > *:not(:last-child) {
-        margin: 3rem 0;
-    }
-
-}
-
-@media only screen and (min-width: 1200px) {
-    .project__card {
-        display: block;
+        min-height: 350px;
     }
 }
