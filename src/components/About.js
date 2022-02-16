@@ -1,10 +1,10 @@
 import React from 'react'
 import img_avatar from '../imgs/img_avatar.png'
 
-const About = () => {
+const About = ( { aboutRef }) => {
 
     return (
-        <section id="about-section" className="about">
+        <section ref={aboutRef} id="about-section" className="about">
             <div className="about__container">
                 <div className="about__license">
                     <h3 className="about__header">California</h3>

@@ -1,0 +1,31 @@
+.gallery {
+    display: flex;
+    padding: .5rem;
+    transition: .3s;
+    // &:hover &__image {
+    //     filter: grayscale(0);
+    // }
+
+
+    &__column {
+        display: flex;
+        flex-direction: column;
+        width: 25%;
+    }
+
+    &__thumb {
+        position: relative;
+        margin: 3px;
+        overflow: hidden;
+    }
+
+    &__image {
+        display: block;
+        width: 100%;
+        transition: .3s;
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+}

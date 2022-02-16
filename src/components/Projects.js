@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Projects = () => {
+const Projects = ({ projectsRef}) => {
   return (
-    <section id="projects-section" className="projects">
+      <section ref={projectsRef} id="projects-section" className="projects">
         <h3 className="projects__title">Projects</h3>
         <div className="projects__container">
             <div className="project__card">

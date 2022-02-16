@@ -22,6 +22,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 1.5rem;
+
     &__links ul {
         display: flex;
         margin: 0;
@@ -43,6 +44,8 @@ ul li a {
     text-decoration: none;
     display: block;
 
+
+    &:link,
     &:visited {
         color: $color-green-gray-light
     }
@@ -257,4 +260,3 @@ ul li a:hover {
         }
     }
 }
-

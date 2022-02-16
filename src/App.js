@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -10,6 +10,8 @@ import Skills from './components/Skills';
 function App() {
 
   const [showScrollToTop, setShowScrollToTop] = useState(false);
+  const aboutRef = useRef();
+  const projectsRef = useRef();
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -28,16 +30,26 @@ function App() {
     })
   }
 
+  function scrollToRef() {
+    if (aboutRef.current) {
+      aboutRef.current.scrollIntoView({behavior: 'smooth'});
+    }
+
+    if (projectsRef.current) {
+      projectsRef.current.scrollIntoView({behavior: 'smooth'})
+    }
+  }
+
 
   return (
     <div className="App">
       <header>
-        <Nav />
+        <Nav scrollToRef={scrollToRef}/>
       </header>
       <main>
         <Hero/>
-        <About/>
-        <Projects/>
+        <About aboutRef={aboutRef}/>
+        <Projects projectsRef={projectsRef}/>
         <Skills/>
       </main>
       <Footer />
