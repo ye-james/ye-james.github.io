@@ -9,66 +9,95 @@ import ExpressLogo from "../imgs/svgs/express-svgrepo-com.svg";
 import MongoDBLogo from "../imgs/svgs/mongodb-svgrepo-com.svg";
 import SQLLogo from "../imgs/svgs/mysql-svgrepo-com.svg";
 import JavaLogo from "../imgs/svgs/java-svgrepo-com.svg";
+import TailwindLogo from '../imgs/svgs/tailwind-svgrepo-com.svg'
+import TSLogo from '../imgs/svgs/typescript-logo-svgrepo-com.svg'
+import PythonLogo from '../imgs/svgs/python-svgrepo-com.svg'
+const skills =
+{
+  Skills:
+    [
+      {
+        name: "HTML",
+        path: HTMLLogo
+      },
+      {
+        name: "JS",
+        path: JSLogo
+      },
+      {
+        name: "CSS",
+        path: CSSLogo
+      },
+      {
+        name: "SASS",
+        path: SASSLogo
+      },
+      {
+        name: "ReactJS",
+        path: ReactLogo
+      },
+      {
+        name: "NodeJS",
+        path: NodeLogo
+      },
+      {
+        name: "Express",
+        path: ExpressLogo
+      },
+      {
+        name: "MongoDB",
+        path: MongoDBLogo
+      },
+      {
+        name: "SQL",
+        path: SQLLogo
+      },
+      {
+        name: "Python",
+        path: PythonLogo
+      },
+      {
+        name: "JAVA",
+        path: JavaLogo
+      }
+    ],
+    'Currently Learning':
+    [
+      {
+        name: "Typescript",
+        path: TSLogo
+      },
+      {
+        name: "Tailwind CSS",
+        path: TailwindLogo
+      }
+    ]
+  };  
 
-
-export const data = [
-  {
-    name: "HTML",
-    path: HTMLLogo
-  },
-  {
-    name: "JS",
-    path: JSLogo
-  },
-  {
-    name: "CSS",
-    path: CSSLogo
-  },
-  {
-    name: "SASS",
-    path: SASSLogo
-  },
-  {
-    name: "ReactJS",
-    path: ReactLogo
-  },
-  {
-    name: "NodeJS",
-    path: NodeLogo
-  },
-  {
-    name: "Express",
-    path: ExpressLogo
-  },
-  {
-    name: "MongoDB",
-    path: MongoDBLogo
-  },
-  {
-    name: "SQL",
-    path: SQLLogo
-  },
-  {
-    name: "JAVA",
-    path: JavaLogo
-  }
-];  
 
 const Skills = () => {
 
 
   return (
     <section className="skills">
-      <h3 className="skills__title">Skills</h3>
-      <div className="skills__container">
-        {data.map((skill, index) => {
+      {
+        Object.entries(skills).map((skill, index) => {
           return (
-            <figure key={index} className="skills__svg">
-              <img className="skills__svg-icon" src={skill.path} alt={skill.name} style={{ width: '4rem', height: '4rem'}} />
-            </figure>
+            <>
+              <h3 key={index} className="skills__title">{skill[0]}</h3>
+              <div className="skills__container">
+              {skill[1].map((item, i) => {
+                return (
+                  <figure key={i} className="skills__svg">
+                    <img className="skills__svg-icon" src={item.path} alt={item.name} style={{ width: '4rem', height: '4rem'}} />
+                  </figure>
+                )
+              })}
+              </div>
+            </>
           )
-        })}
-        </div>
+        })
+      }
     </section>
   )
 }
