@@ -57,7 +57,7 @@ const skills =
         path: PythonLogo
       },
       {
-        name: "JAVA",
+        name: "Java",
         path: JavaLogo
       }
     ],
@@ -90,6 +90,7 @@ const Skills = () => {
                 return (
                   <figure key={i} className="skills__svg">
                     <img className="skills__svg-icon" src={item.path} alt={item.name} style={{ width: '4rem', height: '4rem'}} />
+                    <figcaption className='skills__caption'>{item.name}</figcaption>
                   </figure>
                 )
               })}

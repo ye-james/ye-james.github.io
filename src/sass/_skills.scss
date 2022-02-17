@@ -30,16 +30,28 @@
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        align-items: center;
+        align-items: baseline;
     }
 
     &__svg {
         width: 2rem;
         height: 2rem;
         flex: 1 0 21%;
-        margin: 2rem 1rem;
+        margin: 2.5rem 1rem;
         position: relative;
 
+        &:hover > .skills__caption {
+            display: block;
+        }
+
+    }
+
+    &__caption {
+        display: none;
+        color: $color-green-gray-light;
+        font-size: 1rem;
+        font-weight: 600;
+        margin-top: .3rem;
     }
 
 
