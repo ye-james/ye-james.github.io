@@ -1,15 +1,28 @@
 {
   "files": {
-    "main.css": "/static/css/main.4968f74e.css",
-    "main.js": "/static/js/main.6fb9b0d9.js",
+    "main.css": "/static/css/main.83f95d95.css",
+    "main.js": "/static/js/main.cdbdefe8.js",
     "static/media/IMG_5914.jpg": "/static/media/IMG_5914.95fae3275a07f7b553b3.jpg",
     "static/media/program-1.jpg": "/static/media/program-1.a5690975f6b4e74dc4cd.jpg",
+    "static/media/mongodb-svgrepo-com.svg": "/static/media/mongodb-svgrepo-com.6d3d1850f276edfa810f91b6a64e7989.svg",
+    "static/media/sass-svgrepo-com.svg": "/static/media/sass-svgrepo-com.02dda4cb70eb34023b9a05eecd50e50e.svg",
+    "static/media/react-svgrepo-com.svg": "/static/media/react-svgrepo-com.fdd3331d261ad6d5e1c92448737aa2aa.svg",
+    "static/media/node-svgrepo-com.svg": "/static/media/node-svgrepo-com.1e1a41f6100ebc77fcc7bfaaf44ac5bb.svg",
+    "static/media/java-svgrepo-com.svg": "/static/media/java-svgrepo-com.b4a0adbd9cd896d2c424c0d7b59f7962.svg",
+    "static/media/mysql-svgrepo-com.svg": "/static/media/mysql-svgrepo-com.35ce97ebb0aa486e8980bdcc2c5557a7.svg",
+    "static/media/css-3-svgrepo-com.svg": "/static/media/css-3-svgrepo-com.97715c1c82ff638fe06cd7d8c9b746ac.svg",
+    "static/media/python-svgrepo-com.svg": "/static/media/python-svgrepo-com.42f87cb3c004a68af35276b967671a1c.svg",
+    "static/media/typescript-logo-svgrepo-com.svg": "/static/media/typescript-logo-svgrepo-com.7c2e5f599fa6ccab4be8a590908ec5bb.svg",
+    "static/media/javascript-logo-svgrepo-com.svg": "/static/media/javascript-logo-svgrepo-com.c9f0a72ec86ab6de952b107f64e32cc9.svg",
+    "static/media/express-svgrepo-com.svg": "/static/media/express-svgrepo-com.e0be243e017ae97d906bf5f755016047.svg",
     "index.html": "/index.html",
-    "main.4968f74e.css.map": "/static/css/main.4968f74e.css.map",
-    "main.6fb9b0d9.js.map": "/static/js/main.6fb9b0d9.js.map"
+    "static/media/html5-svgrepo-com.svg": "/static/media/html5-svgrepo-com.84c6adac417775a66b5529f1ae8d4572.svg",
+    "static/media/tailwind-svgrepo-com.svg": "/static/media/tailwind-svgrepo-com.d22b29a2028c438a02033f41d11e899b.svg",
+    "main.83f95d95.css.map": "/static/css/main.83f95d95.css.map",
+    "main.cdbdefe8.js.map": "/static/js/main.cdbdefe8.js.map"
   },
   "entrypoints": [
-    "static/css/main.4968f74e.css",
-    "static/js/main.6fb9b0d9.js"
+    "static/css/main.83f95d95.css",
+    "static/js/main.cdbdefe8.js"
   ]
 }
