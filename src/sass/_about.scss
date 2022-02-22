@@ -61,21 +61,29 @@
         text-transform: uppercase;
         position: relative;
         transition: ease 500ms;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
     }
 
     &__license:hover {
         transform: translateY(-3px);
     }
 
+    &__header {
+        margin-left: 1rem;
+        margin-right: auto;
+    }
+
 
     &__header::before {
         content: "";
-        width: 83%;
+        width: 85%;
         height: 3px;
         background-color: #0056b3;
         position: absolute;
         top: 15%;
-        left: 10%;
+        left: 7.5%;
     }
 
     &__header::after {
@@ -188,18 +196,24 @@
         }
 
         &__header {
-            font-size: .8rem;
-        }
+            font-size: 1rem;
+            margin-left: .5rem;
 
-        &__header::after {
-            font-size: .8rem;
+            &::before {
+                width: 80%;
+                left: 9%;
+            }
+
+            &::after {
+                font-size: .8rem;
+            }
         }
 
         &__main {
             gap: .75rem;
             padding-top: .4rem;
         }
-        
+
         &__license {
             max-width: 330px;
             max-height: 260px;
