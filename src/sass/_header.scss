@@ -1,8 +1,10 @@
 .container {
     width: 100%;
     height: 100vh;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(224, 224, 224, 0.10968137254901966) 43%, rgba(0, 0, 0, 1) 100%),
+    background: linear-gradient(180deg, rgba(224, 224, 224, 0.10968137254901966) 43%, rgba(0, 0, 0, 1) 100%),
         url(../imgs/IMG_5914.jpg);
+    // background: linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(224, 224, 224, 0.10968137254901966) 43%, rgba(0, 0, 0, 1) 100%),
+    //     url(../imgs/IMG_5914.jpg);
     background-position: center;
     background-size: cover;
     color: $color-white;
@@ -20,12 +22,18 @@
     height: 3.5rem;
     display: flex;
     justify-content: space-between;
+    background-color: #F2F2F2;
     align-items: center;
     padding: 1.5rem;
 
     &__links ul {
         display: flex;
         margin: 0;
+    }
+
+    &__logo-icon {
+        width: 40px;
+        height: 40px;
     }
 }
 
@@ -91,13 +99,14 @@ ul li a:hover {
     &__name {
         font-size: 8rem;
         font-weight: 400;
+        letter-spacing: 5px;
         overflow: hidden;
         border-right: .2rem solid white;
         white-space: nowrap;
         margin-top: 3rem;
         animation:
             typing 1.6s steps(12, end),
-            blink-caret .8s step-end infinite;
+            blink-caret 1s step-end infinite;
         animation-delay: 1.2s;
         animation-fill-mode: both;
     }
@@ -105,8 +114,8 @@ ul li a:hover {
     &__title {
         margin-top: 1rem;
         float: right;
-        font-size: 1.1rem;
-        animation: fadeIn linear 1.4s;
+        font-size: 1.0rem;
+        animation: fadeIn linear 1s;
         -webkit-animation: fadeIn linear 1.4s;
         -moz-animation: fadeIn linear 1.4s;
         -o-animation: fadeIn linear 1.4s;

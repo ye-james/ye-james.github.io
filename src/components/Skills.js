@@ -83,8 +83,8 @@ const Skills = () => {
       {
         Object.entries(skills).map((skill, index) => {
           return (
-            <>
-              <h3 key={index} className="skills__title">{skill[0]}</h3>
+            <div key={index}>
+              <h3  className="skills__title">{skill[0]}</h3>
               <div className="skills__container">
               {skill[1].map((item, i) => {
                 return (
@@ -95,7 +95,7 @@ const Skills = () => {
                 )
               })}
               </div>
-            </>
+            </div>
           )
         })
       }

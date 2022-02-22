@@ -5,7 +5,7 @@ const Hero = () => {
     <div className="container">
         <div className="hero">
             <p className="hero__name">
-                James Ye.
+                James Ye
             </p>
             <h5 className="hero__title">
                 Aspiring Software Engineer

@@ -30,12 +30,11 @@ function App() {
     })
   }
 
-  function scrollToRef() {
-    if (aboutRef.current) {
+  function scrollToRef(innerHtml) {
+    if (aboutRef.current && innerHtml === 'About') {
       aboutRef.current.scrollIntoView({behavior: 'smooth'});
-    }
-
-    if (projectsRef.current) {
+    } 
+    if (projectsRef.current && innerHtml === 'Projects') {
       projectsRef.current.scrollIntoView({behavior: 'smooth'})
     }
   }

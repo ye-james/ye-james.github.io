@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Projects = ({ projectsRef}) => {
+const Projects = ({ projectsRef }) => {
   return (
       <section ref={projectsRef} id="projects-section" className="projects">
         <h3 className="projects__title">Projects</h3>
@@ -28,7 +28,7 @@ const Projects = ({ projectsRef}) => {
                     <p className="project__card-body">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eaque nesciunt fugiat
                         nihil modi
                         saepe, deleniti necessitatibus doloremque nobis voluptate sapiente!</p>
-                    <a href="#" className="button">Learn More</a>
+                      <a href="#" className="button">Learn More</a>
                 </div>
             </div>
         </div>
@@ -36,4 +36,4 @@ const Projects = ({ projectsRef}) => {
   )
 }
 
-export default Projects
+export default Projects;

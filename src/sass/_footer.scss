@@ -1,15 +1,28 @@
-footer {
-    height: 10vh;
+.footer {
+    height: 15vh;
+    padding: .5rem 0 2rem 0;
     // background-color: black;
     // color: $color-white;
+
+    &__container {
+        // background-image: linear-gradient($color-white, $color-gray-light);
+        width: 100%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        gap: 1.2rem;
+        align-items: center;
+    }
+
+    &__social {
+        display: flex;
+        gap: .75rem
+    }
 }
 
-.footer__container {
-    background-image: linear-gradient($color-white, $color-gray-light);
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
+.social-icon {
+    width: 30px;
+    height: 30px;
 }

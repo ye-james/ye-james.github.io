@@ -25,12 +25,14 @@
         max-width: 900px;
         min-width: 150px;
         border: 1px solid $color-gray-light;
-        margin: 3rem auto;
+        margin: 4rem auto;
         padding: 2rem 0 3rem 0;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         align-items: baseline;
+        -webkit-box-shadow: -5px 11px 36px -2px rgba(0, 0, 0, 0.31);
+        box-shadow: -5px 11px 36px -2px rgba(0, 0, 0, 0.31);
     }
 
     &__svg {
@@ -40,7 +42,7 @@
         margin: 2.5rem 1rem;
         position: relative;
 
-        &:hover > .skills__caption {
+        &:hover>.skills__caption {
             display: block;
         }
 
@@ -48,7 +50,7 @@
 
     &__caption {
         display: none;
-        color: $color-green-gray-light;
+        color: $color-green-gray-lighter;
         font-size: 1rem;
         font-weight: 600;
         margin-top: .3rem;
