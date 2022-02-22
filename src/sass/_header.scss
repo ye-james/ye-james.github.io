@@ -219,7 +219,7 @@ ul li a:hover {
 
 
 //MEDIA QUERIES
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 575.98px) {
     .toggle-button {
         display: flex;
     }
@@ -227,11 +227,13 @@ ul li a:hover {
     .nav {
         flex-direction: column;
         background-color: $color-white;
+        padding: 0;
         //height: 250px;
         z-index: 10;
 
         &__logo {
-            margin-bottom: 2rem;
+            //margin-bottom: 2rem;
+            margin-top: .5rem;
         }
 
         &__links {
@@ -255,8 +257,6 @@ ul li a:hover {
     .nav__links.active {
         display: flex;
     }
-
-
 
     .hero {
 
