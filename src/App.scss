@@ -1,10 +1,18 @@
 @import './sass/variables';
+
 .App {
   text-align: center;
   position: relative;
 }
 
-.btn-scroll-top {
+
+.text {
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+  text-align: left;
+}
+
+.btn {
   width: 50px;
   height: 50px;
   border: none;
@@ -12,34 +20,55 @@
   border-radius: 50%;
   padding-bottom: 5px;
   font-weight: 700;
-  background-color: $color-green-gray-light;
-  color: $color-white;
+  background-color: #519494;
+  color: #ffffff;
   text-align: center;
-  position: fixed;
-  bottom: 50px;
-  right: 50px;
-  z-index: 10;
 
-  box-shadow: 5px 9px 24px -10px rgba(0,0,0,0.7);
-  -webkit-box-shadow: 5px 9px 24px -10px rgba(0,0,0,0.7);
-  -moz-box-shadow: 5px 9px 24px -10px rgba(0,0,0,0.7);
-   transition: transform 300ms ease;
+  transition: transform 300ms ease;
 
   &:hover {
     transform: translateY(-2px);
   }
 }
 
+.btn-close {
+  width: 25px;
+  height: 25px;
+  font-size: 1rem;
+  padding-top: 1px;
+}
+
+.btn-scroll-top {
+  // width: 50px;
+  // height: 50px;
+  // border: none;
+  // font-size: 2rem;
+  // border-radius: 50%;
+  // padding-bottom: 5px;
+  // font-weight: 700;
+  // background-color: $color-green-gray-light;
+  // color: $color-white;
+  // text-align: center;
+  position: fixed;
+  bottom: 50px;
+  right: 50px;
+  z-index: 10;
+
+  box-shadow: 5px 9px 24px -10px rgba(0, 0, 0, 0.7);
+  -webkit-box-shadow: 5px 9px 24px -10px rgba(0, 0, 0, 0.7);
+  -moz-box-shadow: 5px 9px 24px -10px rgba(0, 0, 0, 0.7);
+}
+
 @media only screen and (max-width: 575.98px) {
-    .btn-scroll-top {
-      bottom: 30px;
-      right: 20px;
-    }
+  .btn-scroll-top {
+    bottom: 30px;
+    right: 20px;
+  }
 }
 
 
 @media only screen and (max-width: 991.98px) {
-    .btn-scroll-top {
-      right: 30px;
-    }
+  .btn-scroll-top {
+    right: 30px;
+  }
 }

@@ -674,6 +674,15 @@ ul li a:hover::after {
   margin-top: 1rem;
 }
 
+.project__card-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .button {
   cursor: pointer;
   display: inline-block;

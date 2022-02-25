@@ -2,7 +2,9 @@ import { useState, useEffect, useRef } from 'react';
 import Nav from './components/Nav';
 import Hero from './components/Hero';
 import About from './components/About';
+import { ProjectsProvider } from './context/ProjectsContext';
 import Projects from './components/Projects';
+import ProjectModal from './components/ProjectModal';
 import Footer from './components/Footer';
 import './App.scss';
 import Skills from './components/Skills';
@@ -10,6 +12,8 @@ import Skills from './components/Skills';
 function App() {
 
   const [showScrollToTop, setShowScrollToTop] = useState(false);
+  const [showModal, setShowModal] = useState(false);
+  const [selectedProject, setSelectedProject] = useState(null);
   const aboutRef = useRef();
   const projectsRef = useRef();
 
@@ -39,6 +43,10 @@ function App() {
     }
   }
 
+  function toggleModal() {
+    setShowModal(!showModal);
+  }
+
 
   return (
     <div className="App">
@@ -47,14 +55,17 @@ function App() {
       </header>
       <main>
         <Hero/>
-        <About aboutRef={aboutRef}/>
-        <Projects projectsRef={projectsRef}/>
+        <About aboutRef={aboutRef} />
+        <ProjectsProvider>
+          <Projects projectsRef={projectsRef} toggleModal={toggleModal} />
+          {showModal && <ProjectModal onClose={toggleModal}/>}
+        </ProjectsProvider>
         <Skills/>
       </main>
       <Footer />
       
       {showScrollToTop && (
-        <button className="btn-scroll-top" onClick={scrollToTop}>
+        <button className="btn btn-scroll-top" onClick={scrollToTop}>
           &#8593;
         </button>
       )}

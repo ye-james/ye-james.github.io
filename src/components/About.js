@@ -28,11 +28,19 @@ const About = ( { aboutRef }) => {
                 </div>
                 <div className="about__bio">
                     <h3 className="about__title">About Me</h3>
-                    <p className="about__text">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore temporibus accusantium id numquam impedit vel magnam
-                    doloremque ipsam commodi, porro facilis beatae voluptatem ut provident omnis ipsum aspernatur veritatis rerum optio.
-                    Consequuntur iste reprehenderit delectus quia vitae veritatis nam, incidunt vero aspernatur asperiores quas veniam!
-                    Magnam culpa eum error natus. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore temporibus accusantium id numquam impedit vel magnam doloremque ipsam commodi, porro facilis beatae voluptatem ut provident omnis ipsum aspernatur veritatis rerum optio. Consequuntur iste reprehenderit delectus quia vitae veritatis nam, incidunt vero aspernatur asperiores quas veniam! Magnam culpa eum error natus.
-                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Labore temporibus accusantium id numquam impedit vel magnam doloremque ipsam commodi, porro facilis beatae voluptatem ut provident omnis ipsum aspernatur veritatis rerum optio. Consequuntur iste reprehenderit delectus quia vitae veritatis nam, incidunt vero aspernatur asperiores quas veniam! Magnam culpa eum error natus.
+                    <p className="text about__text">
+                        Hello, I am <span className="text about__text-bold">James</span>. 
+                        I'm a Security Administrator based in the bay area &#127968; currently working at Meta [Facebook], looking to transition into full-stack development.
+                    </p>
+                    <p className="text about__text">
+                        Being born and raised in the bay area exposed me to technology early.
+                        This lead me to pursue my bachelors in computer science at San Jose State University where I later took a systems administrator at Facebook. 
+                    </p>
+                    <p className="text about__text">
+                        I'm a strong believer in continuous learning, as there is always something new you can learn. After taking an elective for web-development, I loved the creative aspect of creating beautifully designed, responsive web pages using what I learned in school.
+                    </p>
+                    <p className="text about__text">
+                        Outside of work some of my hobbies include: Learning new web technologies, cars, photography, food (cooking or trying a new restaurant). I am also a part time boba connoisseur.
                     </p>
                 </div>
             </div>

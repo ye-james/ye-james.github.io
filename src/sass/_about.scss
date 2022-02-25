@@ -19,7 +19,7 @@
 
     &__title {
         color: $color-green-gray-light;
-        margin-bottom: 2rem;
+        margin-bottom: 4rem;
         position: relative;
 
         &::after {
@@ -43,7 +43,13 @@
         font-size: 1.4rem;
         letter-spacing: 0.1rem;
         text-align: left;
-        margin-top: 3rem
+        margin-top: 2rem;
+
+        &-bold {
+            font-weight: 509;
+            color: $color-green-gray-light;
+            font-size: 2rem;
+        }
     }
 
 

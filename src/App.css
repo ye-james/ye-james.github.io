@@ -1,11 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Mono&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Space+Mono:wght@400;700&display=swap");
+
 .App {
   text-align: center;
   position: relative;
 }
 
-.btn-scroll-top {
+.btn {
   width: 50px;
   height: 50px;
   border: none;
@@ -16,10 +17,23 @@
   background-color: #519494;
   color: #ffffff;
   text-align: center;
-  position: fixed;
+}
+
+.btn-scroll-top {
+  /* width: 50px;
+  height: 50px;
+  border: none;
+  font-size: 2rem;
+  border-radius: 50%;
+  padding-bottom: 5px;
+  font-weight: 700;
+  background-color: #519494;
+  color: #ffffff;
+  text-align: center;
+  position: fixed; */
   bottom: 50px;
   right: 50px;
-  z-index: 10;
+  z-index: 5;
   box-shadow: 5px 9px 24px -10px rgba(0, 0, 0, 0.7);
   -webkit-box-shadow: 5px 9px 24px -10px rgba(0, 0, 0, 0.7);
   -moz-box-shadow: 5px 9px 24px -10px rgba(0, 0, 0, 0.7);
@@ -31,7 +45,7 @@
 
 .btn-scroll-top:hover {
   -webkit-transform: translateY(-2px);
-          transform: translateY(-2px);
+  transform: translateY(-2px);
 }
 
 @media only screen and (max-width: 575.98px) {
@@ -46,4 +60,5 @@
     right: 30px;
   }
 }
+
 /*# sourceMappingURL=App.css.map */
