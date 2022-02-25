@@ -1,8 +1,11 @@
 import React, { useContext } from 'react';
 import ReactDOM from 'react-dom'
+import { ProjectsContext } from '../context/ProjectsContext';
 
-const ProjectModal = ({onClose}) => {
+const ProjectModal = ({ selectedProject, onClose}) => {
 
+  const projectState = useContext(ProjectsContext);
+  const project = projectState.filter(proj => proj.name === selectedProject)[0]
 
 
   return ReactDOM.createPortal(
@@ -11,16 +14,18 @@ const ProjectModal = ({onClose}) => {
       <div className='modal'>
         <header className="modal__header">
           <div className="modal__header-main">
-            <h3 className="modal__title">Project Title</h3>
+            <h3 className="modal__title">{project.name}</h3>
             <button className="btn btn-close" onClick={() => onClose()}>&#10006;</button>
           </div>
           <div className="modal__header-sub">
-            React.js | Node.js
+            {project.technologies.map((tech, index) => {
+              return `${tech} ${index !== project.technologies.length-1 ? ' | ' : ''}`
+            })}
           </div>
         </header>
         <div className="modal__body">
           <p className="text modal__text">
-            Lorem, ipsum dolor sit amet consectetur adipisicing elit. At eligendi porro voluptatem ea quibusdam harum delectus a eveniet non repellat rem mollitia, ut, iusto vero.
+            {project.description}
           </p>
         </div>
       </div>

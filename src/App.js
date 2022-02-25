@@ -44,7 +44,7 @@ function App() {
   }
 
   function toggleModal() {
-    setShowModal(!showModal);
+      setShowModal(!showModal);
   }
 
 
@@ -57,8 +57,8 @@ function App() {
         <Hero/>
         <About aboutRef={aboutRef} />
         <ProjectsProvider>
-          <Projects projectsRef={projectsRef} toggleModal={toggleModal} />
-          {showModal && <ProjectModal onClose={toggleModal}/>}
+          <Projects projectsRef={projectsRef} toggleModal={toggleModal} setSelectedProject={setSelectedProject}/>
+          {showModal && <ProjectModal selectedProject={selectedProject} onClose={toggleModal}/>}
         </ProjectsProvider>
         <Skills/>
       </main>
