@@ -121,6 +121,7 @@
     z-index: 10;
     width: 50%;
     height: 70%;
+    max-width: 800px;
     min-height: 500px;
     max-height: 700px;
 
@@ -154,11 +155,6 @@
     }
 
 }
-
-.btn-container:nth-child(1) {
-    margin-right: 1rem;
-}
-
 
 
 .button {
