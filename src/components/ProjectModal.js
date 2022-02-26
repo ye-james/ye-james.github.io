@@ -1,4 +1,5 @@
 import React, { useContext } from 'react';
+import SlideShow from './SlideShow';
 import ReactDOM from 'react-dom'
 import { ProjectsContext } from '../context/ProjectsContext';
 
@@ -6,7 +7,7 @@ const ProjectModal = ({ selectedProject, onClose}) => {
 
   const projectState = useContext(ProjectsContext);
   const project = projectState.filter(proj => proj.name === selectedProject)[0]
-
+  console.log(document.location.hostname)
 
   return ReactDOM.createPortal(
     <>
@@ -27,6 +28,7 @@ const ProjectModal = ({ selectedProject, onClose}) => {
           <p className="text modal__text">
             {project.description}
           </p>
+          <SlideShow project={project}/>
         </div>
       </div>
     </>,

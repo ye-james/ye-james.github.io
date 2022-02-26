@@ -37,7 +37,7 @@ const About = ( { aboutRef }) => {
                         This lead me to pursue my bachelors in computer science at San Jose State University where I later took a systems administrator at Facebook. 
                     </p>
                     <p className="text about__text">
-                        I'm a strong believer in continuous learning, as there is always something new you can learn. After taking an elective for web-development, I loved the creative aspect of creating beautifully designed, responsive web pages using what I learned in school.
+                        I'm a strong believer in continuous learning, as there is always something new you can learn. After taking an elective for web-development, I loved the creative aspect of creating beautifully designed, responsive web pages.
                     </p>
                     <p className="text about__text">
                         Outside of work some of my hobbies include: Learning new web technologies, cars, photography, food (cooking or trying a new restaurant). I am also a part time boba connoisseur.

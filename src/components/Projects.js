@@ -18,7 +18,7 @@ const Projects = ({ projectsRef, toggleModal, setSelectedProject}) => {
           <div className="projects__container">
               {projects.map(project => {
                   return (
-                      <div key={project.name} className="project__card" style={{backgroundImage: `url(${project.img_url})`}}>
+                      <div key={project.name} className="project__card" style={{backgroundImage: `url(${project.img_preview})`}}>
                         <div className="project__card-content">
                         <h2 className="project__card-title">{project.name}</h2>
                             <p className="project__card-body">{project.snippet}</p>

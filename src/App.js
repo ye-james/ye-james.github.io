@@ -6,8 +6,8 @@ import { ProjectsProvider } from './context/ProjectsContext';
 import Projects from './components/Projects';
 import ProjectModal from './components/ProjectModal';
 import Footer from './components/Footer';
-import './App.scss';
 import Skills from './components/Skills';
+import './App.scss';
 
 function App() {
 
